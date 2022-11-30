@@ -1,0 +1,88 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_fpga_bitmux
+  CLASS core ;
+  FOREIGN gf180mcu_fpga_bitmux ;
+  ORIGIN 0.000 0.000 ;
+  SYMMETRY X Y ;
+  SITE GF018hv5v_mcu_sc7 ;
+  SIZE 8.400 BY 3.920 ;
+  PIN VSS
+    USE GROUND ;
+     SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 2.665 0.300 2.895 1.140 ;
+        RECT 0.000 -0.300 8.400 0.300 ;
+    END
+  END VSS
+  PIN VDD
+    USE POWER ;
+     SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 8.400 4.220 ;
+        RECT 2.665 2.640 2.895 3.620 ;
+    END
+  END VDD
+  PIN BLP
+    ANTENNADIFFAREA 0.190000 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.160 0.770 0.560 1.170 ;
+    END
+  END BLP
+  PIN BLN
+    ANTENNADIFFAREA 0.190000 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 5.000 0.770 5.400 1.170 ;
+    END
+  END BLN
+  PIN WL
+    ANTENNAGATEAREA 0.456000 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.780 1.360 1.180 1.820 ;
+    END
+  END WL
+  PIN QP
+    ANTENNAGATEAREA 0.786000 ;
+    ANTENNADIFFAREA 0.690000 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.455 1.755 1.785 3.010 ;
+        RECT 1.455 1.425 3.480 1.755 ;
+        RECT 1.455 0.770 1.785 1.425 ;
+    END
+  END QP
+  PIN QN
+    ANTENNAGATEAREA 0.954000 ;
+    ANTENNADIFFAREA 0.624000 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 3.775 2.610 5.240 3.010 ;
+        RECT 3.775 2.355 4.105 2.610 ;
+        RECT 2.080 2.025 4.105 2.355 ;
+        RECT 3.775 0.770 4.105 2.025 ;
+    END
+  END QN
+  PIN I
+    ANTENNADIFFAREA 0.728000 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 5.740 0.780 6.100 3.140 ;
+    END
+  END I
+  PIN O
+    ANTENNADIFFAREA 0.728000 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 7.380 0.780 7.740 3.140 ;
+    END
+  END O
+END gf180mcu_fpga_bitmux
+END LIBRARY
+

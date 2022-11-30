@@ -111,9 +111,9 @@ set ::env(MACRO_PLACEMENT_CFG) $::env(DESIGN_DIR)/macro.cfg
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) [glob $::env(DESIGN_DIR)/macros/verilog/*.v]
 
-set ::env(EXTRA_LEFS) [glob $::env(DESIGN_DIR)/macros/lef/*.lef]
+set ::env(EXTRA_LEFS) "[glob $::env(DESIGN_DIR)/macros/lef/*.lef] $::env(DESIGN_DIR)/bitcell/gf180mcu_fpga_bitmux.lef"
 
-set ::env(EXTRA_GDS_FILES) [glob $::env(DESIGN_DIR)/macros/gds/*.gds]
+set ::env(EXTRA_GDS_FILES) "[glob $::env(DESIGN_DIR)/macros/gds/*.gds] $::env(DESIGN_DIR)/bitcell/gf180mcu_fpga_bitmux.gds"
 
 set ::env(RT_MAX_LAYER) {Metal4}
 
